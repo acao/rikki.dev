@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Your Name]]></title>
+        <description><![CDATA[Your Name]]></description>
+        <link>https://rikki.dev</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 11 Jun 2023 15:52:12 GMT</lastBuildDate>
+        <atom:link href="https://rikki.dev/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[GraphQL Federation - emerging options!]]></title>
+            <link>/posts/graphql-federation-emerging-options</link>
+            <guid isPermaLink="true">/posts/graphql-federation-emerging-options</guid>
+            <pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Custom Command Palette & Context Menu Commands with Monaco Editor]]></title>
+            <link>/posts/monaco-command-palette</link>
+            <guid isPermaLink="true">/posts/monaco-command-palette</guid>
+            <pubDate>Wed, 24 Jun 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Announcing VSCode GraphQL 0.3.x and GraphQL LSP 2.5.x]]></title>
+            <link>/posts/vscode-graphql-lsp-0-3-0</link>
+            <guid isPermaLink="true">/posts/vscode-graphql-lsp-0-3-0</guid>
+            <pubDate>Mon, 21 Sep 2020 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
