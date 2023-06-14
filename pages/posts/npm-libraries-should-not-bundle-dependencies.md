@@ -1,6 +1,7 @@
 ---
 title: NPM Libraries With Bundled Dependencies are a Supply Chain Risk! (and more)
 date: 2023-06-14
+image: /assets/rusty-chain.webp
 ---
 
 Some years ago, vite library mode and other bundling tools revolutionized the experience of shipping javascript & typescript modules for the browser. An unfortunate consequence, however, is that many libraries began shipping bundled with their dependencies.
