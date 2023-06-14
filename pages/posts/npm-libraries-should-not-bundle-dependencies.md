@@ -1,5 +1,5 @@
 ---
-title: NPM Libraries With Bundled Dependencies are a supply chain risk (and more)
+title: NPM Libraries With Bundled Dependencies are a Supply Chain Risk! (and more)
 date: 2023-06-14
 ---
 
@@ -36,7 +36,7 @@ However, the maintainer of `zebra` hasn't learned of this because she is on a mu
 
 Her colleauges have learned of this vulnerability on 0 day, when renovatebot or dependabot or snyk or an npm install audit tells them that their lockfile contains vulnerabilities. They quickly re-release their internal software with a resolution for `albatross@1.1.1`. problem solved, right? 
 
-**Unfortunately not.**
+*Unfortunately not.*
 
 The maintainer of `zebra` is using `esbuild` with `bundle: true` to ship her module, and didn't think of this case (neither did I when we first shipped `@graphiql/react`!)
 
@@ -54,13 +54,39 @@ And it is not a problem to be solved by security analysis tools, which should se
 
 ## 2. The Debugging/Sourcemaps Experience is **Whack**
 
-Did you also notice this about two years ago? Suddenly it was much harder to trace buildtime (ts) and runtime bugs with dependencies because the code is entirely inlined?
+Did you also notice this about two years ago? Suddenly it was much harder to trace buildtime (ts) and runtime bugs with dependencies because the code is entirely inlined? 
 
-First of all, modules can ship with their source and sourcemaps to help make this a little easier. Whether they should or not is a whole discussion
+First of all, modules can ship with their source and sourcemaps to help make this a little easier. Whether they should or not is a whole discussion.
+
+The other issue is that, by providing false positive installs, you may actually be looking at the _wrong version_ of the library when debugging the downstream bug.
 
 
 ## How maintainers can solve this problem
 
+Again, *you only need to avoid bundling dependencies when shipping to NPM or other registries.*  If your users want a browser-compatible cdn bundle, you can keep shipping that as, say, `mylibrary.bundle.js` for unpkg, but the `main` or `module` entry should point to a file that, whether transpiled by typescript or whatever tool or not, does not contain external library code
+
 for `esbuild`: set `bundle: false`
 
-for vite library mode, you can use [a plugin like this](https://socket.dev/npm/package/vite-plugin-no-bundle)
+for `vite` library mode, you can use [a plugin like this](https://socket.dev/npm/package/vite-plugin-no-bundle)
+
+for `webpack`, you can set `externals` config like this:
+
+```js
+module.exports = {
+    ...
+    // put everything inside package.json dependencies as externals
+    externals: Object.keys(require('./package.json').dependencies)
+        .reduce(
+            function (acc, cur) {
+                acc[cur] = cur
+                return acc
+            },
+            new Object()
+        ),
+
+    ...
+}
+```
+(from https://stackoverflow.com/a/71215365/1516887)
+
+with plain `typescript`, you can even just use `tsc` cli, and configure your tsconfig.json to target `es5`, `es6` or whatever target meets the needs of your end users. you might need to target `modules` in a specific way depending on whether your library is browser facing, server facing, or universal.
