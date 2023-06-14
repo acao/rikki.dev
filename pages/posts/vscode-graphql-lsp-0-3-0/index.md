@@ -58,6 +58,7 @@ module.exports = {
   },
 }
 ```
+
 #### Custom `rootDir`
 
 You may want to load your graphql config from somewhere other than the repository root. such as a `./config/` directory. Less clutter is good!
