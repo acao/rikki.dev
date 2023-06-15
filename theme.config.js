@@ -30,6 +30,7 @@ export default {
     <footer>
       <small>
         <time>{YEAR}</time> © Rikki Schulte. CC-By-SA
+        <p>This blog is built with [nextra & next.js](https://nextra.site)</p>
         <a href="/feed.xml">RSS</a>
       </small>
       <style jsx>{`
