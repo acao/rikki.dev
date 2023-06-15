@@ -11,7 +11,6 @@ export default {
       )}
       {meta.title && (
         <>
-          <meta name="title" content={meta.title} />
           <meta name="og:title" content={meta.title} />
         </>
       )}
