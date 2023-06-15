@@ -6,6 +6,9 @@ export default {
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
+       {meta.title && (
+        <meta name="title" content={meta.description} />
+      )}
       {meta.tag && <meta name="keywords" content={meta.tag} />}
       <meta name="author" content="Rikki Schulte" />
       {meta.image && <meta name="og:image" content={meta.image} />}

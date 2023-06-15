@@ -3,6 +3,7 @@ title: NPM Libraries With Bundled Dependencies are a Supply Chain Risk! (and mor
 date: 2023-06-14
 image: https://rikki.dev/_next/static/media/bundled-deps-example.jpg
 image_alt: "A Miro diagram illustrating how bundled dependencies in npm libraries can lead to supply chain vulnerabilities"
+description: "When you use npm libraries that bundle their dependencies, your project lockfile is no longer the source of truth."
 ---
 ![](../assets/bundled-deps-example.jpg)
 
@@ -12,7 +13,7 @@ Some years ago, vite library mode and other bundling tools revolutionized the ex
 
 Vite library mode and esbuild with `bundle: true` are great for shipping CDN bundle libraries (say for usage on unpkg, jsdelivr, etc), or for end-consuming apps that deploy somewhere, **where shipping with bundled dependencies is a desired feature**.
 
-However, for esm modules on npm or other javascript package registries, this results in false postivies regarding dependencies, and supply chain vulnerabilities, debugging issues, bundle size issues, and a loss of other patch improvements & flexibility for the end user.
+However, for esm modules on npm or other javascript package registries, this results in false positives regarding dependencies, and supply chain vulnerabilities, debugging issues, bundle size issues, and a loss of other patch improvements & flexibility for the end user.
 
 Why? In short, because **your project lockfile is no longer the source of truth.**
 
@@ -115,7 +116,7 @@ module.exports = {
 
 (from https://stackoverflow.com/a/71215365/1516887)
 
-with plain `typescript`, you can even just use `tsc` cli, and configure your tsconfig.json as needed. You might need to target `modules` in a specific way depending on whether your library is browser facing, server facing, or universal. Make sure to enable sourcemaps and ship them. Similar can be achieved with babel CLI. This is one of the best approaches IMO, because having seperate files and neat sourcemaps vastly improves the debugging experience.
+with plain `typescript`, you can even just use `tsc` cli, and configure your tsconfig.json as needed. You might need to target `modules` in a specific way depending on whether your library is browser facing, server facing, or universal. Make sure to enable sourcemaps and ship them. Similar can be achieved with babel CLI. This is one of the best approaches IMO, because having separate files and neat sourcemaps vastly improves the debugging experience.
 
 ### But I Need to Bundle Certain Dependencies Because of X Reason!
 
