@@ -25,7 +25,7 @@ This is because your package manager (npm, pnpm, yarn, etc) will _think_ it's in
 
 ### Hypothetical Toolchain Vulnerability Scenario
 
-Last month we shipped the ever popular `zebra` module, which depends on a module called `albatross`.
+Last month, Jane maintainer shipped the ever popular `zebra` module, which depends on a module called `albatross`.
 
 `zebra`'s `package.json` looks like this:
 
@@ -39,15 +39,15 @@ Last month we shipped the ever popular `zebra` module, which depends on a module
 }
 ```
 
-however, last week, `albatross` project was contacted by Cure 53, who found an XSS attack vulnerability. `albatross` released a security patch as `albatross@1.1.1`.
+Last week, `albatross` project was contacted by Cure 53, who found an XSS attack vulnerability. `albatross` released a security patch as `albatross@1.1.1`.
 
-However, the maintainer of `zebra` hasn't learned of this because she is on a much needed vacation.
+However, Jane, the maintainer of `zebra` hasn't learned of this yet, because she is on a much needed vacation.
 
 The users of `zebra` have learned of this vulnerability on 0 day, when renovatebot or dependabot or snyk or an npm install audit tells them that their lockfile contains vulnerabilities. They quickly re-release their internal software with a new lockfile resolution for `albatross@1.1.1`. problem solved, right?
 
 _Unfortunately not._
 
-The maintainer of `zebra` is bundling dependencies with her module, and didn't think of this case (neither did I when we first shipped `@graphiql/react`!)
+The maintainer of `zebra`, Jane, is bundling dependencies with her module, and didn't think of this case (neither did I when we first shipped `@graphiql/react`!)
 
 What does this mean? Let's look at this using the old `node_modules` pattern because it's easier to illustrate, though this would impact pnp users as well.
 
@@ -138,4 +138,8 @@ In my opinion, *it should be up to your users to decide what bundling tool to us
 
 ### Is This A Major Risk? Is My Project that Uses X or Y or Z Library Vulnerable?
 
-That's up to you to determine. This is a known issue amongst advanced javascript and typescript users. This should not be bombshell news to anyone. I'm available for hire if you want to know for sure, but a dynamic security analysis tool may be able to help you, in most cases.
+That's up to you to determine. This is a known issue amongst advanced javascript and typescript users. This should not be bombshell news to anyone.
+
+In order to know for certain, you would take the alert from your security tool, and instead of just accepting the PR to fix your lockfile, you would inspect the parent dependency you rely on to ensure that
+
+I'm available for hire, or any other javascript/typescript informed security analyst may be able to help you if you want to know for sure, but some static and/or dynamic security analysis tools may be able to help you, in some cases.
