@@ -7,6 +7,7 @@ export default {
         <>
           <meta name="description" content={meta.description} />
           <meta name="og:description" content={meta.description} />
+          <meta name="twitter:description" content={meta.description} />
         </>
       )}
       {meta.title && (
