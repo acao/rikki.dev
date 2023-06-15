@@ -13,6 +13,7 @@ export default {
       {meta.title && (
         <>
           <meta name="og:title" content={meta.title} />
+          <meta name="twitter:title" content={meta.title} />
         </>
       )}
       {meta.tag && <meta name="keywords" content={meta.tag} />}
