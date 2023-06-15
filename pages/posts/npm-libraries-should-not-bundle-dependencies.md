@@ -133,7 +133,7 @@ In my opinion, *it should be up to your users to decide what bundling tool to us
 - `esbuild` bundles dependencies with `build: true`
 - `vite` bundles dependencies automatically
 - with `webpack`, if they have `exclude: /node_modules/` they should remove it. it's 2023!
-- `next.js@13` still ships with webpack 5, but enabling this is as easy as enabling [`transpilePackages`](https://nextjs.org/docs/app/api-reference/next-config-js/transpilePackages). I am not sure if turbopack includes
+- `next.js@13` still ships with webpack 5, but enabling this is as easy as enabling [`transpilePackages`](https://nextjs.org/docs/app/api-reference/next-config-js/transpilePackages). I would assume this setting works with their turbopack implementation as well.
 
 
 ### Is This A Major Risk? Is My Project that Uses X or Y or Z Library Vulnerable?
