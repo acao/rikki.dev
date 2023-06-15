@@ -1,6 +1,20 @@
 const YEAR = new Date().getFullYear()
 
 export default {
+  head: ({ title, meta }) => (
+    <>
+      {meta.description && (
+        <meta name="description" content={meta.description} />
+      )}
+      {meta.tag && <meta name="keywords" content={meta.tag} />}
+      <meta name="author" content="Rikki Schulte" />
+      {meta.image && <meta name="og:image" content={meta.image} />}
+      {meta.image_alt && <meta name="og:image:alt" content={meta.image_alt} />}
+      {meta.image && <meta name="twitter:image" content={meta.image} />}
+      {meta.image_alt && <meta name="twitter:image:alt" content={meta.image_alt} />}
+
+    </>
+  ),
   footer: (
     <footer>
       <small>
