@@ -48,7 +48,7 @@ Another common use case is serializing GeoJSON features for the query. Even with
 
 ## `supabase-js`
 
-This is an excellent ORM and platform, provided the necessary PostGIS datatypes (though I had a few bugs with these iirc), and available configuration to enable the PostGIS extension, however I could not find a way to construct a `WHERE` clause with our off-the-shelf `PostGIS` methods in any way.  There is no way to construct a raw query.
+This is an excellent ORM and platform, provided the necessary PostGIS datatypes (though I had a few bugs with these iirc), and available configuration to enable the PostGIS extension, however I could not find a way to construct a `WHERE` clause with our off-the-shelf `PostGIS` methods in any way outside of writing custom SQL functions, which required lots of migrations as we fine tuned the queries over the application lifecycle, and we also had issues with the columns not honoring the CRS, meaning we couldn't get most queries to work, despite working with the supabase team to try to make them work, we ended up with strange GEOS errors.
 
 ## `prisma-client-js`
 
