@@ -42,6 +42,7 @@ export default {
     appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
     lang: "en",
   },
+  darkMode: true,
   footer: (
     <footer>
       <small>

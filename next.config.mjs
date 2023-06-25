@@ -1,21 +1,17 @@
-import nextra from 'nextra'
+import nextra from "nextra";
 
 const withNextra = nextra({
-  theme: 'nextra-theme-blog',
-  themeConfig: './theme.config.jsx',
-  unstable_staticImage: true,
+  theme: "nextra-theme-blog",
+  themeConfig: "./theme.config.jsx",
   staticImage: true,
-  readingTime: true
+  readingTime: true,
   // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
-})
-
+});
 
 export default withNextra({
   reactStrictMode: true,
   cleanDistDir: true,
-  output: 'export',
-  images: {
-    unoptimized: true
-  }
+  output: "export",
+  images: { unoptimized: true },
   // any configs you need
-})
+});
