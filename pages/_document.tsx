@@ -1,10 +1,10 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   const meta = {
-    title: 'The Output Channel',
-    description: 'The developer blog of Rikki Schulte',
-  }
+    title: "The Output Channel",
+    description: "The developer blog of Rikki Schulte",
+  };
 
   return (
     <Html lang="en">
@@ -26,5 +26,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

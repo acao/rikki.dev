@@ -1,6 +1,18 @@
+import Cusdis from "nextra-theme-blog/cusdis";
+
 const YEAR = new Date().getFullYear();
 
+const Comments = () => (
+  <div id="comments-wrapper">
+    <h2>Comments</h2>
+    <Cusdis />
+  </div>
+);
+/**
+ * @type import("nextra-theme-blog").NextraBlogTheme
+ */
 export default {
+  comments: <Comments />,
   head: ({ title, meta }) => (
     <>
       {meta.description && (
@@ -26,18 +38,28 @@ export default {
       )}
     </>
   ),
+  cusdis: {
+    appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
+    lang: "en",
+  },
   footer: (
     <footer>
       <small>
         <time>{YEAR}</time> © Rikki Schulte. CC-By-SA
-        <p>This blog is built with [nextra & next.js](https://nextra.site)</p>
-        <a href="/feed.xml">RSS</a>
       </small>
+      <div>
+      <small>This blog is built with{" "}
+        <a href="https://nextra.site">nextra & next.js</a>
+        </small>
+      </div>
+      <div>
+        <a className="feed-link" href="/feed.xml">RSS</a>
+      </div>
       <style jsx>{`
         footer {
           margin-top: 8rem;
         }
-        a {
+        a.feed-link {
           float: right;
         }
       `}</style>
