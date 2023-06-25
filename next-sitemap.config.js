@@ -2,6 +2,6 @@
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://rikki.dev',
-    generateRobotsTxt: true
-  }
+  siteUrl: "https://rikki.dev",
+  generateRobotsTxt: true,
+};

@@ -36,6 +36,7 @@ export default {
       {meta.image_alt && (
         <meta name="twitter:image:alt" content={meta.image_alt} />
       )}
+      <meta name="ostrio-domain" content="c53xIOPRFZAw7AUZHFGjYW9RBf2sYdoOCtxfYyMH9aN"></meta>
     </>
   ),
   cusdis: {
