@@ -48,7 +48,11 @@ Another common use case is serializing GeoJSON features for the query. Even with
 
 ## `supabase-js`
 
-This is an excellent ORM and platform, provided the necessary PostGIS datatypes (though I had a few bugs with these iirc), and available configuration to enable the PostGIS extension, however I could not find a way to construct a `WHERE` clause with our off-the-shelf `PostGIS` methods in any way outside of writing custom SQL functions, which required lots of migrations as we fine tuned the queries over the application lifecycle, and we also had issues with the columns not honoring the CRS, meaning we couldn't get most queries to work, despite working with the supabase team to try to make them work, we ended up with strange GEOS errors.
+This is an excellent ORM and platform, provided the necessary PostGIS datatypes (though I had a few bugs with these iirc), and available configuration to enable the PostGIS extension, however you can only construct these queries using custom PostgreSQL functions, which required lots of migrations as we fine tuned the queries over the application lifecycle
+
+We eventually ended up with a blocking issue, despite working with the supabase team to try to make them work, we ended up [with strange GEOS errors](https://github.com/orgs/supabase/discussions/14013) that they were never able to resolve. The query worked fine in the local CLI that provisioned docker containers, but on the platform we got strange errors that we weren't able to resolve, despite making many tweaks to the PostgreSQL function (and incurring many repeat migrations to test the change on the platform).
+
+If you're using supabase, hopefully you don't encounter this issue! Perhaps it's related to a platform issue that only is impacted by `ST_INTERSECTS()`.
 
 ## `prisma-client-js`
 
