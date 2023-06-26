@@ -37,6 +37,7 @@ export default {
         <meta name="twitter:image:alt" content={meta.image_alt} />
       )}
       <meta name="ostrio-domain" content="c53xIOPRFZAw7AUZHFGjYW9RBf2sYdoOCtxfYyMH9aN"></meta>
+      <script async defer type="text/javascript" src="https://analytics.ostr.io/bTg9XFQo9HyiugJPN.js"></script>
     </>
   ),
   cusdis: {
