@@ -2,6 +2,7 @@
 title: Announcing VSCode GraphQL 0.3.x and GraphQL LSP 2.5.x
 date: 2020-09-21
 image: ./vscode-graphql-main.png
+description: A detailed breakdown of added improvements to the GraphQL Language Server Protocol server and the VSCode extension
 ---
 
 There have been some _significant_ changes to the official [GraphQL Language Service)](https://www.npmjs.com/package/graphql-language-service) and [language server](https://www.npmjs.com/package/graphql-language-service-server) itself.
