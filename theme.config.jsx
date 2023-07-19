@@ -15,6 +15,7 @@ export default {
   comments: <Comments />,
   head: ({ title, meta }) => (
     <>
+      <title>{title + ' | the outputChannel'}</title>
       {meta.description && (
         <>
           <meta name="description" content={meta.description} />

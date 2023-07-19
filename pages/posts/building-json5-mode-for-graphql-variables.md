@@ -18,7 +18,7 @@ This leverages `monaco-json`'s api which allows you to define a set of json sche
 
 ### 1. Continues working when string parse methods fail, such as `JSON5.parse()` or `JSON.parse()`
 
-> *JSON/5 language features are still needed when you have a `SyntaxError`*
+> _JSON/5 language features are still needed when you have a `SyntaxError`_
 
 We created a utility you can see in the PR below using cm6's syntax tree that still parses and aggregates json pointers and positional data when the string parse fails.
 
@@ -46,11 +46,11 @@ it should provide what `monaco-json` provides already for `JSON4`, and thus we a
 
 ### A. CM6 JSON5 Variables Editor Plugin!
 
-[@imolorhe](https://github.com/imolorhe), GitHub Copilot and I are making a lot of headway on a json (JSON4) json-schema-enabled mode for cm6!
+[@imolorhe](https://github.com/imolorhe), GitHub Copilot and I are making a lot of headway on a json (JSON4) json-schema-enabled mode for cm6! And it now supports json5!
 
-https://github.com/acao/cm6-language-json-schema/pull/2
+https://github.com/acao/codemirror-json-schema
 
-The cm6 syntax tree is a breeze to work with and very performant, **and would be easy to translate to `JSON5`** using their existing `JSON5` mode (which just calls `JSON5.parse()` and handles validation messages for now, no JSON Schema in scope).
+~The cm6 syntax tree is a breeze to work with and very performant, **and would be easy to translate to `JSON5`** using their existing `JSON5` mode (which just calls `JSON5.parse()` and handles validation messages for now, no JSON Schema in scope).~ Update: We've now implemented it!
 
 So, as we do with `cm6-language-json-schema` and `@codemirror/lang-json`, we can extend the existing `codemirror-json5` mode that exists to provide JSON Schema support for json5 using their syntax tree, and then provide a cm6 `JSON5` variables editor as a graphiql plugin in place of the `monaco-json` editor.
 
@@ -68,6 +68,7 @@ This would also be determined by microsoft's willingness to pursue such a goal. 
 
 Someone could also create a new `monaco-json` style-like mode from scratch for `JSON5`. I would look into existing `JSON5` vscode extensions, and other libraries that implement `JSON5` features and validation that have json-schema support, and use this as the underlying implementation. Monaco, unlike codemirror, does not bring it's own parser and syntax tree conventions, so this can be both freeing, and a performance issue.
 
+In fact... what if someone made a `monaco-json5` language mode with.... `@lezer/common` and `@codemirror/language`??? it's technically possible!
 
 ## Ask Me for Help
 

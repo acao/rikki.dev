@@ -63,7 +63,20 @@ img.next-image {
 }
 
 .nx-prose a {
-  color: #0074de;
+  color: #206fb9;
+}
+
+.light .nx-prose a:hover,
+.light .nx-prose a:focus {
+  color: #164f85;
+}
+
+.light .nx-prose h3 a {
+  color: var(--fbc-primary-text)
+}
+
+.dark .nx-prose a:hover, .dark .nx-prose a:active {
+  color: #2686df;
 }
 
 .nav-line .nav-link {
