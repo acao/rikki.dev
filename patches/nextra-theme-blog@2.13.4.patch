@@ -1,0 +1,13 @@
+diff --git a/dist/index.js b/dist/index.js
+index dd8e55d55dd900fd86235652446c00f36cbf3896..45dbed36d164386b2a160bfae88271d07fe5909e 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -324,7 +324,7 @@ function Nav() {
+     /* @__PURE__ */ jsxs6("div", { className: "nx-flex nx-grow nx-flex-wrap nx-items-center nx-justify-end nx-gap-3", children: [
+       navPages.map((page) => {
+         var _a2;
+-        const name = ((_a2 = page.frontMatter) == null ? void 0 : _a2.title) || page.name;
++        const name = (page.frontMatter && page.frontMatter.menuTitle) || ((_a2 = page.frontMatter) == null ? void 0 : _a2.title) || page.name;
+         if (page.active) {
+           return /* @__PURE__ */ jsx6(
+             "span",
