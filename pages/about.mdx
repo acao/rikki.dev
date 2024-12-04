@@ -4,8 +4,7 @@ title: About Rikki
 date: 2021-03-19
 ---
 
-export const Since = () => (new Date().getFullYear() - 2010).toString();
-export const BerlinSince = () => (new Date().getFullYear() - 2021).toString();
+export const Since = ({ year }) => (new Date().getFullYear() - year).toString();
 
 Hi I'm Rikki Schulte!
 
@@ -16,9 +15,8 @@ I am:
   - I've helped maintain the [GraphQL Developer ecosystem](https://github.com/graphql/graphiql) since 2018
   - I've created tools from scratch like `moncao-graphql` and `codemirror-json-schema` to power the web editor tooling ecosystem!
 - A fullstack typescript & javascript lead engineer with a focus on React, Node, Next.js, Nest.js, GraphQL, OpenAPI, Event Driven Systems, and RPC
-- A professional software engineer for <Since /> years
+- A professional software engineer for <Since year={10} /> years
 - A proud Auntie & Cat parent
-- Happily living in Berlin, Germany (and learning German!) for <BerlinSince /> years
 - A plant, food, outdoors, and travel lover
 - Enamoured with the Portuguese language, both Brazillian and Portuguese dialects
 
@@ -33,6 +31,6 @@ I am:
       LinkedIn:&nbsp;
       <a href="https://www.linkedin.com/in/rikkischulte/">rikkischulte</a>
     </li>
-    <li>Email:&nbsp;rikki.schulte@gmail.com </li>
+    <li>Email:&nbsp;rikki@rikki.dev </li>
   </ul>
 </div>
