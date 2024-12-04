@@ -1,7 +1,8 @@
 ---
 title: Custom Command Palette & Context Menu Commands with Monaco Editor
-date: 2020-06-24
+date: 2020/6/24
 image: ../assets/1-2-command-pallete.png
+description: Showing you how to render the command palette in monaco
 ---
 
 As many of us know, monaco-editor is the underlying editor used in vscode, codesandbox, many awesome deveoper IDE tools!

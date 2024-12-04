@@ -1,6 +1,6 @@
 ---
 title: "TypeScript 2024: The Year in Review"
-date: 2024-03-19
+date: 2024/12/4
 description: A comprehensive exploration of TypeScript and ECMAScript features that shaped 2024, with practical examples and implementation details
 ---
 

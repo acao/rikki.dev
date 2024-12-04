@@ -1,7 +1,7 @@
 ---
 title: Evaluating PostGIS support in Typescript ORMs
 description: A short exploration of popular Typescript ORMs and their PostGIS support constraints
-date: 2023-06-25
+date: 2023/6/25
 ---
 
 ## Comparing Postgres ORMs
