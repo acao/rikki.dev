@@ -1,6 +1,6 @@
 ---
 title: GraphQL Federation - emerging options!
-date: 2022-04-01
+date: 2022/04/01
 description: A brief list of available options as alternative/similar solutions for apollo federation
 ---
 

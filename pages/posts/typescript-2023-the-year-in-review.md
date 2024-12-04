@@ -1,6 +1,6 @@
 ---
 title: "Typescript 2023: The Year in Review"
-date: 2023-12-04
+date: 2023/12/04
 description: A deep dive into TypeScript's major features from 2023, with practical examples and implementation details
 ---
 

@@ -1,5 +1,7 @@
 ---
-Title: Exciting news for the GraphQL LSP & Vscode ecosystem!
+title: Exciting news for the GraphQL LSP & Vscode ecosystem!
+date: 2024/2/01
+description: "Updates about my grant from the GraphQL Foundation"
 ---
 
 I'm excited to announce that I've received a significant grant from the GraphQL Foundation to help ensure the stability of and preparedness for the ecosystem.

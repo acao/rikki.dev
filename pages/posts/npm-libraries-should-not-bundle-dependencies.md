@@ -1,6 +1,6 @@
 ---
 title: NPM Libraries With Bundled Dependencies are a Supply Chain Risk! (and more)
-date: 2023-06-14
+date: 2023/06/14
 image: https://rikki.dev/_next/static/media/bundled-deps-example.jpg
 image_alt: "A Miro diagram illustrating how bundled dependencies in npm libraries can lead to supply chain vulnerabilities"
 description: "When you use npm libraries that bundle their dependencies, your project lockfile is no longer the source of truth."

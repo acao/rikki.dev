@@ -1,6 +1,6 @@
 ---
 title: Building a JSON Schema-enabled `JSON5` mode for codemirror, monaco and/or graphiql
-date: 2023-07-18
+date: 2023/07/18
 description: A `JSON5` mode for `monaco editor` or `codemirror6` that works against JSONSchema definitions like `monaco-json` doesn't exist yet, here are a few recipies for how it could work for `graphiql`!
 ---
 
