@@ -1,5 +1,5 @@
 diff --git a/dist/index.js b/dist/index.js
-index dd8e55d55dd900fd86235652446c00f36cbf3896..45dbed36d164386b2a160bfae88271d07fe5909e 100644
+index dd8e55d55dd900fd86235652446c00f36cbf3896..8ea7ea70d790f762eb0b6588d170489ae09c6c24 100644
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -324,7 +324,7 @@ function Nav() {
@@ -11,3 +11,12 @@ index dd8e55d55dd900fd86235652446c00f36cbf3896..45dbed36d164386b2a160bfae88271d0
          if (page.active) {
            return /* @__PURE__ */ jsx6(
              "span",
+@@ -380,7 +380,7 @@ function PostsLayout({
+     return /* @__PURE__ */ jsxs8("div", { className: "post-item", children: [
+       /* @__PURE__ */ jsx8("h3", { children: /* @__PURE__ */ jsx8(Link4, { href: post.route, passHref: true, legacyBehavior: true, children: /* @__PURE__ */ jsx8("a", { className: "!nx-no-underline", children: postTitle }) }) }),
+       description && /* @__PURE__ */ jsxs8("p", { className: "nx-mb-2 dark:nx-text-gray-400 nx-text-gray-600", children: [
+-        description,
++        jsx8(MDXTheme, { children: [description] }),
+         config.readMore && /* @__PURE__ */ jsx8(Link4, { href: post.route, passHref: true, legacyBehavior: true, children: /* @__PURE__ */ jsx8("a", { className: "post-item-more nx-ml-2", children: config.readMore }) })
+       ] }),
+       date && /* @__PURE__ */ jsx8(
