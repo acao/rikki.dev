@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://rikki.dev</loc><lastmod>2024-12-05T00:51:42.236Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/about</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/building-json5-mode-for-graphql-variables</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/graphql-federation-emerging-options</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/monaco-command-palette</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/npm-libraries-should-not-bundle-dependencies</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/postgis-typescript-evaluation</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/typescript-2023-the-year-in-review</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/typescript-2024-the-year-in-review</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/vscode-graphql-lsp-0-3-0</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rikki.dev/posts/vscode-graphql-lsp-2024</loc><lastmod>2024-12-05T00:51:42.237Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

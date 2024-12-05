@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rikki.dev
+
+# Sitemaps
+Sitemap: https://rikki.dev/sitemap.xml

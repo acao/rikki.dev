@@ -1,11 +1,10 @@
 import nextra from "nextra";
 
 const withNextra = nextra({
-  theme: "nextra-theme-blog",
-  themeConfig: "./theme.config.jsx",
+  theme: 'nextra-theme-blog',
+  themeConfig: "./theme.config.tsx",
   staticImage: true,
   readingTime: true,
-  // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
 });
 
 export default withNextra({
@@ -13,5 +12,4 @@ export default withNextra({
   cleanDistDir: true,
   output: "export",
   images: { unoptimized: true },
-  // any configs you need
 });

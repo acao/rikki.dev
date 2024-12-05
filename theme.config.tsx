@@ -1,21 +1,31 @@
-import Cusdis from "nextra-theme-blog/cusdis";
+import { useRouter } from "next/router";
+import { NextraBlogTheme } from "nextra-theme-blog";
+import { ReactCusdis as Cusdis } from "react-cusdis";
 
 const YEAR = new Date().getFullYear();
 
-const Comments = () => (
-  <div id="comments-wrapper">
-    <h2>Comments</h2>
-    <Cusdis />
-  </div>
-);
-/**
- * @type import("nextra-theme-blog").NextraBlogTheme
- */
+const Comments = () => {
+  const { pathname } = useRouter();
+  return (
+    <div id="comments-wrapper">
+      <h2>Comments</h2>
+      <Cusdis
+        attrs={{
+          appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
+          host: "https://rikki.dev",
+          pageId: pathname,
+        }}
+        lang="en"
+      />
+    </div>
+  );
+};
+
 export default {
   comments: <Comments />,
   head: ({ title, meta }) => (
     <>
-      <title>{title + ' | the outputChannel'}</title>
+      <title>{title + " | the outputChannel"}</title>
       {meta.description && (
         <>
           <meta name="description" content={meta.description} />
@@ -37,14 +47,18 @@ export default {
       {meta.image_alt && (
         <meta name="twitter:image:alt" content={meta.image_alt} />
       )}
-      <meta name="ostrio-domain" content="c53xIOPRFZAw7AUZHFGjYW9RBf2sYdoOCtxfYyMH9aN"></meta>
-      <script async defer type="text/javascript" src="https://analytics.ostr.io/bTg9XFQo9HyiugJPN.js"></script>
+      <meta
+        name="ostrio-domain"
+        content="c53xIOPRFZAw7AUZHFGjYW9RBf2sYdoOCtxfYyMH9aN"
+      ></meta>
+      <script
+        async
+        defer
+        type="text/javascript"
+        src="https://analytics.ostr.io/bTg9XFQo9HyiugJPN.js"
+      ></script>
     </>
   ),
-  cusdis: {
-    appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
-    lang: "en",
-  },
   darkMode: true,
   footer: (
     <footer>
@@ -52,12 +66,15 @@ export default {
         <time>{YEAR}</time> © Rikki Schulte. CC-By-SA
       </small>
       <div>
-      <small>This blog is built with{" "}
-        <a href="https://nextra.site">nextra & next.js</a>
+        <small>
+          This blog is built with{" "}
+          <a href="https://nextra.site">nextra & next.js</a>
         </small>
       </div>
       <div>
-        <a className="feed-link" href="/feed.xml">RSS</a>
+        <a className="feed-link" href="/feed.xml">
+          RSS
+        </a>
       </div>
       <style jsx>{`
         footer {
@@ -69,4 +86,4 @@ export default {
       `}</style>
     </footer>
   ),
-};
+} as NextraBlogTheme;
