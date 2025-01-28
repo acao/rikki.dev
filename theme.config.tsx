@@ -4,7 +4,7 @@ import { ReactCusdis as Cusdis } from "react-cusdis";
 
 const YEAR = new Date().getFullYear();
 
-const Comments = () => {
+const Comments = ({ title }) => {
   const { pathname } = useRouter();
   return (
     <div id="comments-wrapper">
@@ -14,8 +14,6 @@ const Comments = () => {
           appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
           host: "https://cusdis.com",
           pageId: pathname,
-          pageTitle: document.title,
-          pageUrl: document.location.href,
         }}
         lang="en"
       />
