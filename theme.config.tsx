@@ -6,18 +6,40 @@ const YEAR = new Date().getFullYear();
 
 const Comments = () => {
   const { pathname } = useRouter();
+  if (typeof window === "undefined") return null;
   return (
     <div id="comments-wrapper">
-      <h2>Comments</h2>
+      {/* <h2>Comments</h2>
+      <style>
+        {`
+         #cusdis_thread iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #cusdis_thread iframe > div {
+     
+        width: 100%;
+        height: 100%;
+      }`}
+      </style>
       <Cusdis
+        style={{
+          width: "100%",
+          position: "relative",
+          height: 0,
+          paddingBottom: "56.25%",
+        }}
         attrs={{
           appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
           host: "https://cusdis.com",
           pageId: pathname,
-          theme: 'auto'
+          theme: "dark",
         }}
         lang="en"
-      />
+      /> */}
     </div>
   );
 };
