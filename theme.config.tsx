@@ -4,7 +4,7 @@ import { ReactCusdis as Cusdis } from "react-cusdis";
 
 const YEAR = new Date().getFullYear();
 
-const Comments = ({ title }) => {
+const Comments = () => {
   const { pathname } = useRouter();
   return (
     <div id="comments-wrapper">
