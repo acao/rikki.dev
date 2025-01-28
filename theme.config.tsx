@@ -14,6 +14,7 @@ const Comments = () => {
           appId: "2d017102-38b5-4fc8-ba8b-1b0a45a305a2",
           host: "https://cusdis.com",
           pageId: pathname,
+          theme: 'auto'
         }}
         lang="en"
       />
