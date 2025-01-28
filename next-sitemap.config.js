@@ -1,7 +1,7 @@
 // next-sitemap.config.js
 
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: "https://rikki.dev",
   generateRobotsTxt: true,
 };
