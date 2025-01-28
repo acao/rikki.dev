@@ -1,8 +1,9 @@
 import nextra from "nextra";
+import blog from "nextra-theme-blog";
 
 const withNextra = nextra({
-  theme: 'nextra-theme-blog',
-  themeConfig: "./theme.config.tsx",
+  theme: blog,
+  themeConfig: "./theme.config.jsx",
   staticImage: true,
   readingTime: true,
 });
