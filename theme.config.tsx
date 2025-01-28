@@ -47,15 +47,13 @@ export default {
       {meta.image_alt && (
         <meta name="twitter:image:alt" content={meta.image_alt} />
       )}
-      <meta
-        name="ostrio-domain"
-        content="c53xIOPRFZAw7AUZHFGjYW9RBf2sYdoOCtxfYyMH9aN"
-      ></meta>
+      <link rel="preconnect" href="https://analytics.ostr.io/" crossOrigin="" />
+      <link rel="dns-prefetch" href="https://analytics.ostr.io/" />
       <script
         async
         defer
         type="text/javascript"
-        src="https://analytics.ostr.io/bTg9XFQo9HyiugJPN.js"
+        src="https://analytics.ostr.io/u6KvJBgJmb9Yzhhem.js"
       ></script>
     </>
   ),
